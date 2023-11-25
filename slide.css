@@ -1,0 +1,97 @@
+body {
+    background-color: #f2f2f2;
+  }
+  
+  .slider {
+    width: 50vw;
+    height: 550px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 8px 0px #d3d3d3;
+    margin: auto;
+  }
+  .slider .slide {
+    width: 100%;
+    height: 100%;
+    font-size: 5em;
+    text-align: center;
+    line-height: 5em;
+    position: absolute;
+    transition: all 0.5s;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .slider .slide:nth-of-type(1) {
+    background-color: #c6db70;
+    z-index: 1;
+  }
+  .slider .slide:nth-of-type(2) {
+    background-color: #70db9b;
+    z-index: 2;
+  }
+  .slider .slide:nth-of-type(3) {
+    background-color: #709bdb;
+    z-index: 3;
+  }
+  .slider .slide:nth-of-type(4) {
+    background-color: #c670db;
+    z-index: 4;
+  }
+  .slider .slide:nth-of-type(5) {
+    background-color: #db7070;
+    z-index: 5;
+  }
+  .slider .slide img {
+    width: 100%;
+    height: 550px;
+  }
+  .slider .slide-control {
+    position: absolute;
+    z-index: 999;
+    bottom: 0px;
+    margin-bottom: 10px;
+    left: calc(50% - 70px);
+    width: 400px;
+    height: 30px;
+    padding: 5px;
+  }
+  .slider .slide-control li {
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #ffffff;
+    transform: scale(0.75);
+    transition: all 0.35s ease 0.2s;
+    cursor: pointer;
+  }
+  .slider .slide-control li.active, .slider .slide-control li:hover {
+    background-color: #fff;
+    transform: scale(1);
+  }
+  .slider .prev,
+  .slider .next {
+    padding: 10px 15px;
+    background: none;
+    border: 3px solid #ffffff;
+    box-shadow: 5px 5px #000000;
+    color: #ffffff;
+    position: absolute;
+    top: calc(50% - 20px);
+    z-index: 999;
+    cursor: pointer;
+  }
+  .slider .next {
+    right: 0;
+  }
+  
+  .texto-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
